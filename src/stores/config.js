@@ -12,5 +12,10 @@ export const useConfigStore = defineStore('config', () => {
         }
     })
 
-    return { tile }
+    const map = ref({
+        center: [51.01137015793673, 2.1842228124579064],
+        zoom: 15,
+    })
+
+    return { tile, map }
 })

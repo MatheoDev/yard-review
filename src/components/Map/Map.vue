@@ -13,8 +13,8 @@ const configStore = useConfigStore()
 
 onMounted(() => {
     // init map
-    const map = new Map('map').setView([51.505, -0.09], 13)
-    map.setView([51.505, -0.09], 15)
+    const map = new Map('map')
+    map.setView(configStore.map.center, configStore.map.zoom)
     // add tile layer
     const tileLayer = new TileLayer(configStore.tile.url, configStore.tile.options)
     tileLayer.addTo(map)

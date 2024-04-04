@@ -1,1 +1,2 @@
 @import './base.css';
+@import './leaflet/leaflet.css'; /* add here the import of leaflet style */

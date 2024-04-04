@@ -5,19 +5,21 @@
 
 <script setup>
 // Map component, we will perform it to have a fluid map
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { Map, TileLayer } from '@/assets/leaflet/leaflet-src.esm.js'
 import { useConfigStore } from '@/stores/config'
 
 const configStore = useConfigStore()
 
+const map = ref(null)
+
 onMounted(() => {
     // init map
-    const map = new Map('map')
-    map.setView(configStore.map.center, configStore.map.zoom)
+    map.value = new Map('map')
+    map.value.setView(configStore.map.center, configStore.map.zoom)
     // add tile layer
     const tileLayer = new TileLayer(configStore.tile.url, configStore.tile.options)
-    tileLayer.addTo(map)
+    tileLayer.addTo(map.value)
 })
 </script>
 

@@ -15,6 +15,13 @@ export const useConfigStore = defineStore('config', () => {
     const map = ref({
         center: [51.01137015793673, 2.1842228124579064],
         zoom: 15,
+        rotate: true,
+        rotateControl: {
+            closeOnZeroBearing: false,
+            position: 'topright',
+        },
+        bearing: 0,
+        touchRotate: true,
     })
 
     return { tile, map }

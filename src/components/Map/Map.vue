@@ -29,14 +29,6 @@ onMounted(() => {
     // add tile layer
     const tileLayer = L.tileLayer(configStore.tile.url, configStore.tile.options)
     tileLayer.addTo(map.value)
-
-    // add arround this coord 51.01137015793673, 2.1842228124579064 some polygon (rectangle 10px sur 20px en coord gps)
-    // const polygon = L.polygon([
-    //     [51.01137015793673, 2.1842228124579064],
-    //     [51.01137015793673, 2.1842228124579064 + 0.0001],
-    //     [51.01137015793673 + 0.0001, 2.1842228124579064 + 0.0001],
-    //     [51.01137015793673 + 0.0001, 2.1842228124579064]
-    // ]).addTo(map.value)
 })
 
 const addPolygon = () => {

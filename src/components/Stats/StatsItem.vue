@@ -14,6 +14,7 @@ const props = defineProps({
   // 0 => FPS Frames rendered in the last second. The higher the number the better
   // 1 => MS Milliseconds needed to render a frame. The lower the number the better
   // 2 => MB MBytes of allocated memory. (Run Chrome with --enable-precise-memory-info)
+  // 3 => Custom panel - User defined panel see "https://github.com/mrdoob/stats.js/blob/master/examples/custom.html"
   typeStats: {
     type: Number,
     required: true
